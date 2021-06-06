@@ -3,22 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Test ren778 web</title>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <p>No Robot Yes Human</p>
-    <form action="?" method="POST">
-      <div id="reCAPTCHA"></div><br>
-      <input type="submit" value="Continue">
+    <form method="POST" action="?">
+      <div class="g-recaptcha" data-sitekey="6LfdihUbAAAAAIXdh2omZdZQ7vHFz8-ShcUfubrx" data-callback="myAlert"></div>
     </form>
-
-    <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('reCAPTCHA', {
-          'sitekey' : '6LfdihUbAAAAAIXdh2omZdZQ7vHFz8-ShcUfubrx'
-        });
-      };
-    </script>
   </body>
 </html>
