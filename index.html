@@ -3,17 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Test ren778 web</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script>
+      var OK = false;
+      var onloadCallback = function() {
+        grecaptcha.render('recaptcha', {
+          'sitekey' : '6LfdihUbAAAAAIXdh2omZdZQ7vHFz8-ShcUfubrx',
+          'callback' : myAlert,
+          'expired-callback' : expired_myAlert
+        });
+      }
       var myAlert = function(response) {
-        alert("CheckOK");
+        OK = true;
+      }
+      var expired_myAlert = function(response) {
+        OK = false;
       }
     </script>
   </head>
   <body>
     <p>No Robot Yes Human</p>
     <form method="POST" action="?">
-      <div class="g-recaptcha" data-sitekey="6LfdihUbAAAAAIXdh2omZdZQ7vHFz8-ShcUfubrx" data-callback="myAlert"></div>
+      <div id="recaptcha"></div>
     </form>
   </body>
 </html>
