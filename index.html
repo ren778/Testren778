@@ -5,7 +5,7 @@
     <title>Test ren778 web</title>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script>
-      var OK = false;
+      var checkbutton = document.querySelector("#checkbutton");
       var onloadCallback = function() {
         grecaptcha.render('recaptcha', {
           'sitekey' : '6LfdihUbAAAAAIXdh2omZdZQ7vHFz8-ShcUfubrx',
@@ -14,17 +14,18 @@
         });
       }
       var myAlert = function(response) {
-        OK = true;
+        checkbutton.disabled = false;
       }
       var expired_myAlert = function(response) {
-        OK = false;
+        checkbutton.disabled = true;
       }
     </script>
   </head>
   <body>
     <p>No Robot Yes Human</p>
-    <form method="POST" action="?">
+    <form action="?" method="POST">
       <div id="recaptcha"></div>
+      <button id="checkbutton" disabled>Continue</button>
     </form>
   </body>
 </html>
