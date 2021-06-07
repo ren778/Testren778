@@ -20,8 +20,14 @@
       }
       function checkbuttonpress() {
         alert("OK");
+        document.querySelector("body").classList.add("nodisplay");
       }
     </script>
+    <style>
+      .nodisplay {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <p>No Robot Yes Human</p>
