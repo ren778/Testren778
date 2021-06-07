@@ -20,7 +20,7 @@
       }
       function checkbuttonpress() {
         //alert("OK");
-        document.querySelector("body").classList.add("nodisplay");
+        document.getElementById("checkhuman").classList.add("nodisplay");
         document.getElementById("CheckSuccess").classList.remove("nodisplay");
       }
     </script>
@@ -32,8 +32,10 @@
   </head>
   <body>
     <p>No Robot Yes Human</p>
-    <div id="recaptcha"></div>
-    <button id="checkbutton" onclick="checkbuttonpress()" disabled>Continue</button>
+    <div id="checkhuman">
+      <div id="recaptcha"></div>
+      <button id="checkbutton" onclick="checkbuttonpress()" disabled>Continue</button>
+    </div>
     <p class="nodisplay" id="CheckSuccess">OKです！</p>
   </body>
 </html>
