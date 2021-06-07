@@ -21,12 +21,11 @@
       function checkbuttonpress() {
         alert("OK");
       }
-      document.getElementById("checkbutton").addEventListener('click', checkbuttonpress); 
     </script>
   </head>
   <body>
     <p>No Robot Yes Human</p>
     <div id="recaptcha"></div>
-    <button id="checkbutton" disabled>Continue</button>
+    <button id="checkbutton" onclick="checkbuttonpress" disabled>Continue</button>
   </body>
 </html>
