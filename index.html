@@ -19,8 +19,9 @@
         document.getElementById("checkbutton").disabled = true;
       }
       function checkbuttonpress() {
-        alert("OK");
+        //alert("OK");
         document.querySelector("body").classList.add("nodisplay");
+        document.getElementById("CheckSuccess").classList.remove("nodisplay");
       }
     </script>
     <style>
@@ -33,5 +34,6 @@
     <p>No Robot Yes Human</p>
     <div id="recaptcha"></div>
     <button id="checkbutton" onclick="checkbuttonpress()" disabled>Continue</button>
+    <p class="nodisplay" id="CheckSuccess">OKです！</p>
   </body>
 </html>
