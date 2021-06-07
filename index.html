@@ -18,9 +18,10 @@
       var expired_myAlert = function() {
         document.getElementById("checkbutton").disabled = true;
       }
-      document.getElementById("checkbutton").addEventListener("click", () => {
+      function checkbuttonpress() {
         alert("OK");
-      });
+      }
+      document.getElementById("checkbutton").addEventListener("click", checkbuttonpress); 
     </script>
   </head>
   <body>
