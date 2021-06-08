@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Test ren778 web</title>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <link rel="stylesheet" href="material.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
       var onloadCallback = function() {
         grecaptcha.render('recaptcha', {
@@ -36,6 +38,11 @@
       <div id="recaptcha"></div>
       <button id="checkbutton" onclick="checkbuttonpress()" disabled>Continue</button>
     </div>
-    <p class="nodisplay" id="CheckSuccess">OKです！</p>
+    <div class="nodisplay" id="CheckSuccess">
+      <p>OKです！</p>
+      <span class="material-icons-outlined">
+        check_circle
+      </span>
+    </div>
   </body>
 </html>
